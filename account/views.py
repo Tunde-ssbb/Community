@@ -19,6 +19,7 @@ def registration_view(request):
 
             return redirect("home")
         else:
+            print(form.errors)
             context["registration_form"] = form
     else: 
         form = RegistrationForm()
