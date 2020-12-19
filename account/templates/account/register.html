@@ -1,0 +1,21 @@
+{% extends 'account/account_layout.html' %}
+
+{% block body %}
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in registration_form %}
+            {{ field.label_tag }}
+            {{field}}
+
+            {% if field.help_text %}
+                <small style="color:grey;">{{field.help_text}}</small>
+            {% endif %}
+
+            {% for error in field.errors %}
+                <p style="color:red;">{{field.help_text}}</p>
+            {% endfor %}
+
+        {% endfor %}
+        <input type="submit" value="Register">
+    </form>
+{% endblock %}

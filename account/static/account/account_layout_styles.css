@@ -1,0 +1,28 @@
+.body {
+    width : 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40px auto;
+}
+
+#top_bar {
+    background-color: #fcd980;
+}
+
+#page_content {
+    text-align: center;
+    background-color: #fff7e3;
+}
+
+#app_name{
+    margin-bottom: 20px;
+}
+
+#account_box{
+    width: 600px;
+    height: auto;
+    border: 5px solid #f1cd70;
+    border-radius: 20px;
+    margin:auto;
+    padding: 20px 50px;
+}

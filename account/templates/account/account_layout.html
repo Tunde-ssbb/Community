@@ -1,0 +1,27 @@
+<!-- Layout for account pages (login, register,...)-->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Link stylesheets -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="{% static 'account/account_layout_styles.css' %}" rel="stylesheet">
+
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="body">
+            <div id = "top_bar"></div>
+
+            <div id="page_content">
+                <h1 id="app_name" class="display-1">Community</h1>
+                <div id="account_box">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div>  
+               
+        </div>
+    </body>
+</html>
